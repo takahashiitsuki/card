@@ -1,0 +1,3 @@
+class Trump < ApplicationRecord
+  
+end
