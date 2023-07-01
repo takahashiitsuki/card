@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: "homes#top"
   get 'trumps/new'
   get 'trumps/index'
   get 'trumps/edit'
