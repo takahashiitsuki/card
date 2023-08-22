@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: "homes#top"
-  get 'trumps/new'
+  get 'trumps/create'
   get 'trumps/index'
   get 'trumps/edit'
   get 'trumps/update'

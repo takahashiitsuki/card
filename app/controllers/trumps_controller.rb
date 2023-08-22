@@ -1,5 +1,5 @@
 class TrumpsController < ApplicationController
-  def new
+  def create
     @trump = Trump.new
     @trump.number = rand(13)
     @trump.suit = rand(4)
