@@ -1,8 +1,8 @@
 <div class="container">
   <h1>トランプ管理</h1>
   <br>
-  <%= link_to "カードを引く", trumps_new_path, class: "btn" %>
-  <% @cards.each do |card| %>
-    <%= card.number %>
-  <% end %>
+  <%= link_to "カードを引く", trumps_create_path, class: "btn" %>
+  <div class = "list">
+    <%= render 'trumps/list', cards: @cards %>
+  </div>
 </div>

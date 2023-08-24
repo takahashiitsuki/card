@@ -1,2 +1,3 @@
-<h1>Trumps#index</h1>
-<p>Find me in app/views/trumps/index.html.erb</p>
+<% @cards.each do |card| %>
+    <%= card.number %>
+  <% end %>
