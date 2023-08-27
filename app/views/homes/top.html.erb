@@ -1,7 +1,7 @@
 <div class="container">
   <h1>トランプ管理</h1>
   <br>
-  <%= link_to "カードを引く", trumps_create_path, class: "btn" %>
+  <%= link_to "カードを引く", url: 'trumps', class: "btn", method: :post, remote: true %>
   <div class = "list">
     <%= render 'trumps/list', cards: @cards %>
   </div>

@@ -8,6 +8,7 @@ class TrumpsController < ApplicationController
   end
 
   def index
+    @cards = Trump.all
   end
 
   def edit

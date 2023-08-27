@@ -1,3 +1,7 @@
-<% @cards.each do |card| %>
-    <%= card.number %>
-  <% end %>
+<div class="container">
+  <h1>トランプ管理</h1>
+  <br>
+  <div class = "list">
+    <%= render 'trumps/list', cards: @cards %>
+  </div>
+</div>
