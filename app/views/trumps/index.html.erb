@@ -1,7 +1,13 @@
 <div class="container">
   <h1>トランプ管理</h1>
   <br>
-  <div class = "list">
-    <%= render 'trumps/list', cards: @cards %>
+  <%= @players.each do |player| %>
+    
+    <div class = "list">
+      <%= render 'trumps/list', cards: @cards %>
+    </div>
+  <% end %>
+  <div class = "new_player">
+    <%= link_to "＋",player_path class: 'btn',method: :post, remote: true %>
   </div>
 </div>

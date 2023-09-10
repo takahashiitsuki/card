@@ -1,4 +1,4 @@
-<%= link_to "カードを引く", trumps_path, class: "btn", method: :post, remote: true %>
+<%= link_to "カードを引く", trumps_path, class: "btn btn-outline-dark", method: :post, remote: true %>
 <% cards.each do |card| %>
     <% if card.suit == 4 %>
         JOKER
@@ -6,3 +6,5 @@
         <%= Suit.find(card.suit).name + card.number.to_s %>
     <% end %>
 <% end %>
+<br>
+<%= link_to "リセット", trumps_path, class:"btn btn-outline-dark", method: :delete, remote: true %>

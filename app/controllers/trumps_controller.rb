@@ -13,8 +13,9 @@ class TrumpsController < ApplicationController
   end
 
   def index
-    @cards = Trump.all
+    @players = Player.all
   end
+  
 
   def edit
   end
@@ -23,5 +24,6 @@ class TrumpsController < ApplicationController
   end
 
   def destroy
+    Trump.destroy_all
   end
 end
