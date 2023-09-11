@@ -4,10 +4,10 @@
   <%= @players.each do |player| %>
     
     <div class = "list">
-      <%= render 'trumps/list', cards: @cards %>
+      <%= render 'trumps/list', cards: Trump.where(player_id: player.id) %>
     </div>
   <% end %>
   <div class = "new_player">
-    <%= link_to "＋",player_path class: 'btn',method: :post, remote: true %>
+    <%= link_to "＋",player_path, class: 'btn btn-outline-dark',method: :post, remote: true %>
   </div>
 </div>
