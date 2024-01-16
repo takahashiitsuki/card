@@ -7,4 +7,9 @@
     <% end %>
 <% end %>
 <br>
+<%= form_with url: trumps_path, local: true, method: :get do |f| %>
+    <%= f.select :suit, ["♠", "♦", "♥", "♣", "JOKER"] %>
+    <%= link_to "好きなカードを引く", trumps_path, class: "btn btn-outline-dark", method: :post, remote: true %>
+<% end %>
+<br>
 <%= link_to "リセット", trumps_path, class:"btn btn-outline-dark", method: :delete, remote: true %>
